@@ -1,0 +1,179 @@
+/**********TITELSKÆRM*******/
+
+#menu_background {
+    background-image: url(grafik/titelsk%C3%A6rm.rigtig.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 56vw;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+#start {
+    display: none;
+    background-image: url(grafik/play.svg);
+    background-size: 20vw;
+    width: 20vw;
+    height: 20vw;
+    position: absolute;
+    top: 28vw;
+    left: 33vw;
+}
+
+#start_settings {
+    display: none;
+    background-image: url(grafik/settings.svg);
+    background-size: 16vw;
+    width: 16vw;
+    height: 5.85vw;
+    position: relative;
+    bottom: 184vw;
+    left: 83vw;
+    z-index: 1;
+}
+
+#settings {
+    display: none;
+    background-image: url(grafik/settings%20open.svg);
+    background-size: 50vw;
+    width: 50vw;
+    height: 37.7vw;
+    position: relative;
+    bottom: 175vw;
+    left: 25vw;
+}
+
+
+
+/**********SLUT TITELSKÆRM*******/
+
+/***********SPILLESKÆRM***********/
+
+#game_background {
+    background-image: url(grafik/spillesk%C3%A6rm.svg);
+    background-size: cover;
+    width: 100vw;
+    height: 56vw;
+}
+
+#game {
+    position: relative;
+}
+
+#game_elements {
+    position: relative;
+}
+
+#butterflyblue {
+    background-image: url(grafik/butterfly%20blue.svg);
+    background-size: 10vw;
+    width: 10vw;
+    height: 8.6vw;
+    position: relative;
+    bottom: 10vw;
+    left: 60vw;
+    z-index: 1;
+}
+
+#angrybee {
+    background-image: url(grafik/angry%20bee.svg);
+    background-size: 10vw;
+    width: 10vw;
+    height: 7vw;
+    position: relative;
+    bottom: 25vw;
+    left: 10vw;
+    transform: rotateY(180deg);
+}
+
+#butterflyorange {
+    background-image: url(grafik/butterfly%20orange.svg);
+    background-size: 10vw;
+    width: 10vw;
+    height: 8vw;
+    position: relative;
+    bottom: 45vw;
+    left: 25vw;
+    transform: rotateY(180deg);
+}
+
+#fatbee {
+    background-image: url(grafik/fat%20angry%20bee.svg);
+    background-size: 8vw;
+    width: 8vw;
+    height: 6.4vw;
+    position: relative;
+    bottom: 55vw;
+    left: 70vw;
+    transform: rotateY(180deg);
+}
+
+#points {
+    background-image: url(grafik/fangede%20sommerfugl.svg);
+    background-size: 15vw;
+    width: 15vw;
+    height: 9.5vw;
+    position: relative;
+    bottom: 86vw;
+    left: 0vw;
+    z-index: 1;
+}
+
+#energy {
+    background-image: url(grafik/life.svg);
+    background-size: 15vw;
+    width: 15vw;
+    height: 9.5vw;
+    position: relative;
+    bottom: 96vw;
+    left: 85vw;
+    z-index: 1;
+}
+
+#time {
+    background-image: url(grafik/tid.svg);
+    background-size: 15vw;
+    width: 15vw;
+    height: 9.5vw;
+    position: relative;
+    bottom: 105vw;
+    left: 43vw;
+    z-index: 1;
+
+}
+
+#gameover {
+    display: none;
+    background-image: url(grafik/game%20over.svg);
+    background-size: 64vw;
+    width: 65vw;
+    height: 55vw;
+    position: relative;
+    bottom: 114vw;
+    left: 18vw;
+    z-index: 1;
+
+}
+
+#levelcomplete {
+    display: none;
+    background-image: url(grafik/winner.svg);
+    background-size: 55vw;
+    width: 55vw;
+    height: 45vw;
+    position: relative;
+    bottom: 110vw;
+    left: 20vw;
+    z-index: 1;
+}
+
+
+
+
+
+
+
+/********SLUT SPILLESKÆRM*********/
