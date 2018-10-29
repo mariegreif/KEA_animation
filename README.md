@@ -1,5 +1,3 @@
 # KEA_animation
 
-Link to Game Bees VS Butterflies
-
-link link link 
+Link til mit spil: http://greif.nu/kea/03-animation/spil/ 
