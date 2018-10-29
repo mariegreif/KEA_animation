@@ -1,12 +1,22 @@
+body {margin: 0;}
+
 /**********TITELSKÆRM*******/
 
-#menu_background {
-    background-image: url(grafik/titelsk%C3%A6rm.rigtig.svg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 100vw;
-    height: 56vw;
+#screen {
     position: relative;
+    width: 100vw;
+    height: 56.25vw;
+
+}
+
+#menu_background {
+    display: none;
+    background-image: url(grafik/titelsk%C3%A6rm.rigtig.svg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
     overflow: hidden;
 }
 
@@ -53,73 +63,67 @@
 /***********SPILLESKÆRM***********/
 
 #game_background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     background-image: url(grafik/spillesk%C3%A6rm.svg);
-    background-size: cover;
-    width: 100vw;
-    height: 56vw;
+    background-size: 100%;
+
 }
 
-#game {
-    position: relative;
-}
-
-#game_elements {
-    position: relative;
-}
 
 #butterflyblue {
     background-image: url(grafik/butterfly%20blue.svg);
-    background-size: 10vw;
+    background-size: 100%;
     width: 10vw;
     height: 8.6vw;
-    position: relative;
-    bottom: 10vw;
-    left: 60vw;
-    z-index: 1;
+    position: absolute;
+    top: 20vw;
+    left: 62vw;
+
 }
 
 #angrybee {
     background-image: url(grafik/angry%20bee.svg);
-    background-size: 10vw;
+    background-size: 100%;
     width: 10vw;
     height: 7vw;
-    position: relative;
-    bottom: 25vw;
+    position: absolute;
+    top: 15vw;
     left: 10vw;
     transform: rotateY(180deg);
 }
 
 #butterflyorange {
     background-image: url(grafik/butterfly%20orange.svg);
-    background-size: 10vw;
+    background-size: 100%;
     width: 10vw;
     height: 8vw;
-    position: relative;
-    bottom: 45vw;
-    left: 25vw;
+    position: absolute;
+    top: 28vw;
+    left:30vw;
     transform: rotateY(180deg);
 }
 
 #fatbee {
     background-image: url(grafik/fat%20angry%20bee.svg);
-    background-size: 8vw;
+    background-size: 100%;
     width: 8vw;
     height: 6.4vw;
-    position: relative;
-    bottom: 55vw;
-    left: 70vw;
+    position: absolute;
+    top: 40vw;
+    left: 50vw;
     transform: rotateY(180deg);
 }
 
 #points {
     background-image: url(grafik/fangede%20sommerfugl.svg);
-    background-size: 15vw;
+    background-size: 100%;
     width: 15vw;
     height: 9.5vw;
-    position: relative;
-    bottom: 86vw;
+    position: absolute;
+    top: 0vw;
     left: 0vw;
-    z-index: 1;
 }
 
 #energy {
@@ -127,10 +131,10 @@
     background-size: 15vw;
     width: 15vw;
     height: 9.5vw;
-    position: relative;
-    bottom: 96vw;
+    position: absolute;
+    top: 0vw;
     left: 85vw;
-    z-index: 1;
+
 }
 
 #time {
@@ -138,36 +142,33 @@
     background-size: 15vw;
     width: 15vw;
     height: 9.5vw;
-    position: relative;
-    bottom: 105vw;
+    position: absolute;
     left: 43vw;
-    z-index: 1;
+
 
 }
 
 #gameover {
     display: none;
     background-image: url(grafik/game%20over.svg);
-    background-size: 64vw;
+    background-size: 100%;
     width: 65vw;
     height: 55vw;
-    position: relative;
-    bottom: 114vw;
-    left: 18vw;
-    z-index: 1;
+    position: absolute;
+    bottom: 2vw;
+    left: 20vw;
 
 }
 
 #levelcomplete {
     display: none;
     background-image: url(grafik/winner.svg);
-    background-size: 55vw;
+    background-size: 100%;
     width: 55vw;
     height: 45vw;
-    position: relative;
-    bottom: 110vw;
-    left: 20vw;
-    z-index: 1;
+    position: absolute;
+    top: 6vw;
+    left: 24vw;
 }
 
 
