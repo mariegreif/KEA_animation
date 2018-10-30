@@ -43,7 +43,7 @@ function hideStart() {
     //hide settings
     document.querySelector("#settings").classList.remove("show");
 
-    //Når fade animationen er færdig -> startGame
+    //Når fade animationen er færdig ->startGame
     document.querySelector("#game_background").addEventListener("animationend", startGame);
 }
 
