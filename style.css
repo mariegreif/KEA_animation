@@ -5,14 +5,14 @@ body {
 /**********TITELSKÆRM*******/
 
 #screen {
+    background-color: deepskyblue;
     position: relative;
     width: 100vw;
     height: 56.25vw;
-
+    overflow: hidden;
 }
 
-#menu_background {
-    display: none;
+#start {
     background-image: url(grafik/titelsk%C3%A6rm.rigtig.svg);
     background-size: 100%;
     background-repeat: no-repeat;
@@ -24,8 +24,7 @@ body {
 
 
 
-#start {
-    display: none;
+#play {
     background-image: url(grafik/play.svg);
     background-size: 20vw;
     width: 20vw;
@@ -36,25 +35,21 @@ body {
 }
 
 #start_settings {
-    display: none;
     background-image: url(grafik/settings.svg);
     background-size: 16vw;
     width: 16vw;
     height: 5.85vw;
-    position: relative;
-    bottom: 184vw;
+    position: absolute;
     left: 83vw;
-    z-index: 1;
 }
 
 #settings {
-    display: none;
     background-image: url(grafik/settings%20open.svg);
     background-size: 50vw;
     width: 50vw;
     height: 37.7vw;
-    position: relative;
-    bottom: 175vw;
+    position: absolute;
+    bottom: 12vw;
     left: 25vw;
 }
 
@@ -62,7 +57,59 @@ body {
 
 /**********SLUT TITELSKÆRM*******/
 
+/****effekter******/
+
+.hide {
+    visibility: hidden;
+}
+
+.show {
+    visibility: visible;
+}
+
+.blur {
+    filter: blur(5px) brightness(80%);
+}
+
+.fade_out {
+    animation-name: fadeout_kf;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeout_kf {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.pulse {
+    animation-name: pulse_kf;
+    animation-duration: 1.7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+
+
+@keyframes pulse_kf {
+    0% {
+        transform: scale(0.97);
+    }
+
+    100% {
+        transform: scale(1.2);
+    }
+}
+
 /***********SPILLESKÆRM***********/
+
+
 
 #game_background {
     position: absolute;
@@ -86,34 +133,6 @@ body {
 
 }
 
-.butterflyblue_fly {
-    animation-name: fly;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-direction: normal;
-}
-
-@keyframes fly {
-    0% {
-        left: 100vw;
-    }
-
-    50% {
-
-        left: 50vw;
-        top: 40vw;
-
-    }
-
-    100% {
-        left: -10vw;
-    }
-}
-
-
-
-
-
 #angrybee {
     background-image: url(grafik/angry%20bee.svg);
     background-size: 100%;
@@ -125,29 +144,6 @@ body {
     transform: rotateY(180deg);
 }
 
-.angrybee_fly {
-    animation-name: bee_fly;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    animation-direction: reverse;
-}
-
-@keyframes bee_fly {
-    0% {
-        left: 100vw;
-    }
-
-    50% {
-
-        left: 40vw;
-        top: 30vw;
-
-    }
-
-    100% {
-        left: -10vw;
-    }
-}
 
 
 #butterflyorange {
@@ -161,30 +157,7 @@ body {
     transform: rotateY(180deg);
 }
 
-.butterflyorange_fly {
-    animation-name: butterflyorange_fly;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
-    animation-direction: reverse;
-    animation-delay: 7s;
-}
 
-@keyframes butterflyorange_fly {
-    0% {
-        left: 100vw;
-    }
-
-    50% {
-
-        left: 40vw;
-        top: 20vw;
-
-    }
-
-    100% {
-        left: -10vw;
-    }
-}
 
 #fatbee {
     background-image: url(grafik/fat%20angry%20bee.svg);
@@ -197,30 +170,7 @@ body {
     transform: rotateY(180deg);
 }
 
-.fatbee_fly {
-    animation-name: fatbee_fly;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-delay: 7s;
-}
 
-@keyframes fatbee_fly {
-    0% {
-        left: 100vw;
-    }
-
-    50% {
-
-        left: 60vw;
-        top: 50vw;
-
-    }
-
-    100% {
-        left: -15vw;
-        top: 10vw;
-    }
-}
 
 #points {
     background-image: url(grafik/fangede%20sommerfugl.svg);
@@ -277,10 +227,121 @@ body {
     left: 24vw;
 }
 
-
-
-
-
+/*
 
 
 /********SLUT SPILLESKÆRM*********/
+
+
+/******ANIMATIONER********/
+
+.butterflyblue_fly {
+    animation-name: fly;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-timing-function: linear;
+}
+
+@keyframes fly {
+    0% {
+        left: 100vw;
+    }
+
+    50% {
+
+        left: 70vw;
+        top: 40vw;
+
+    }
+
+    100% {
+        left: -10vw;
+        top: 20vw;
+    }
+}
+
+.fatbee_fly {
+    animation-name: fatbee_fly;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+}
+
+@keyframes fatbee_fly {
+    0% {
+        left: 100vw;
+        top: 20vw;
+    }
+
+    30% {
+
+        left: 65vw;
+        top: 43vw;
+
+    }
+
+    60% {
+        left: 20vw;
+        top: 20vw;
+    }
+
+    100% {
+        left: -15vw;
+        top: 10vw;
+    }
+}
+
+.butterflyorange_fly {
+    animation-name: butterflyorange_fly;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    animation-delay: 0s;
+    animation-timing-function: linear;
+}
+
+@keyframes butterflyorange_fly {
+    0% {
+        left: 100vw;
+    }
+
+    50% {
+
+        left: 40vw;
+        top: 20vw;
+
+    }
+
+    100% {
+        left: -10vw;
+    }
+}
+
+.angrybee_fly {
+    animation-name: bee_fly;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-direction: reverse;
+    animation-timing-function: linear;
+}
+
+@keyframes bee_fly {
+    0% {
+        left: 100vw;
+    }
+
+    50% {
+
+        left: 40vw;
+        top: 30vw;
+
+    }
+
+    100% {
+        left: -10vw;
+    }
+}
+
+/*****SLUT ANIMATIONER******/
