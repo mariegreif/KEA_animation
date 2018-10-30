@@ -14,12 +14,14 @@ function showStart() {
     document.querySelector("#start").classList.add("show");
     //start animation på start-knap
     document.querySelector("#play").classList.add("pulse");
-    //vis settings
+    //play pulserer
     document.querySelector("#start_settings").classList.add("show");
+    //vis settings
 
     document.querySelector("#play").addEventListener("click", hideStart);
-
+    //klik på play og spillet starter
     document.querySelector("#start_settings").addEventListener("click", showSettings);
+    //klik på settings og vis
 }
 
 function showSettings() {
