@@ -5,7 +5,7 @@ body {
 /**********TITELSKÆRM*******/
 
 #screen {
-    background-color: deepskyblue;
+    background-color: white;
     position: relative;
     width: 100vw;
     height: 56.25vw;
@@ -44,7 +44,7 @@ body {
 }
 
 #settings {
-    background-image: url(grafik/settings%20open.svg);
+    background-image: url(grafik/settingsnyeste.svg);
     background-size: 50vw;
     width: 50vw;
     height: 37.7vw;
@@ -53,7 +53,35 @@ body {
     left: 25vw;
 }
 
+#kryds {
+    background-image: url(grafik/kryds.svg);
+    background-size: 8vw;
+    height: 5vw;
+    width: 8vw;
+    position: absolute;
+    left: 40vw;
+    top: 1vw;
+}
 
+#toggleleft {
+    background-image: url(grafik/toggleleft.svg);
+    background-size: 10vw;
+    height: 6vw;
+    width: 10vw;
+    position: absolute;
+    top: 12vw;
+    left: 28vw;
+}
+
+#toggleright {
+    background-image: url(grafik/toggleright.svg);
+    background-size: 10vw;
+    height: 6vw;
+    width: 10vw;
+    position: absolute;
+    top: 18vw;
+    left: 28vw;
+}
 
 /**********SLUT TITELSKÆRM*******/
 
@@ -69,6 +97,10 @@ body {
 
 .blur {
     filter: blur(5px) brightness(80%);
+}
+
+.paused {
+    animation-play-state: paused;
 }
 
 .fade_out {
@@ -107,6 +139,24 @@ body {
     }
 }
 
+.dissappear {
+    animation-name: dissappear_kf;
+    animation-duration: .7s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(.59, -0.56, .77, 1.34);
+    animation-fill-mode: forwards;
+}
+
+@keyframes dissappear_kf {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(0);
+    }
+}
+
 /***********SPILLESKÆRM***********/
 
 
@@ -120,6 +170,8 @@ body {
 
 }
 
+/*******SPIL-FIGURER********/
+
 #butterflyblue {
     background-image: url(grafik/butterfly%20blue.svg);
     background-size: 100%;
@@ -128,7 +180,7 @@ body {
     position: absolute;
     background-repeat: no-repeat;
     top: 20vw;
-    left: 62vw;
+    left: -10vw;
 
 
 }
@@ -140,7 +192,7 @@ body {
     height: 7vw;
     position: absolute;
     top: 15vw;
-    left: 10vw;
+    left: -10vw;
     transform: rotateY(180deg);
 }
 
@@ -153,7 +205,7 @@ body {
     height: 8vw;
     position: absolute;
     top: 28vw;
-    left: 30vw;
+    left: -10vw;
     transform: rotateY(180deg);
 }
 
@@ -166,11 +218,13 @@ body {
     height: 6.4vw;
     position: absolute;
     top: 40vw;
-    left: 50vw;
+    left: -10vw;
     transform: rotateY(180deg);
 }
 
+/*********SLUT SPIL-FIGURER*********/
 
+/***************UI-ELEMENTER**********/
 
 #points {
     background-image: url(grafik/fangede%20sommerfugl.svg);
@@ -182,19 +236,41 @@ body {
     left: 0vw;
 }
 
+#points .antal {
+    font-family: 'Mali', cursive;
+    color: #b96e16;
+    font-size: 5vw;
+    background-size: 100%;
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 1.5vw;
+    left: 7vw;
+}
+
 #energy {
-    background-image: url(grafik/life.svg);
-    background-size: 15vw;
+    background-image: url(grafik/scoretom.svg);
+    background-size: 100%;
     width: 15vw;
     height: 9.5vw;
     position: absolute;
     top: 0vw;
     left: 85vw;
+    display: flex;
 
 }
 
+.heart {
+    background-image: url(grafik/hjerte.svg);
+    background-size: 100%;
+    width: 4vw;
+    height: 4vw;
+    position: relative;
+    top: 3vw;
+    left: 1.5vw;
+}
+
 #time {
-    background-image: url(grafik/tid.svg);
+    background-image: url(grafik/scoretom.svg);
     background-size: 15vw;
     width: 15vw;
     height: 9.5vw;
@@ -227,7 +303,7 @@ body {
     left: 24vw;
 }
 
-/*
+/***************SLUT UI-ELEMENTER**********/
 
 
 /********SLUT SPILLESKÆRM*********/
@@ -235,12 +311,15 @@ body {
 
 /******ANIMATIONER********/
 
+
+
 .butterflyblue_fly {
     animation-name: fly;
     animation-duration: 4s;
     animation-iteration-count: infinite;
     animation-direction: normal;
     animation-timing-function: linear;
+    animation-delay: 3s;
 }
 
 @keyframes fly {
@@ -265,7 +344,7 @@ body {
     animation-name: fatbee_fly;
     animation-duration: 5s;
     animation-iteration-count: infinite;
-    animation-delay: 0s;
+    animation-delay: 3s;
     animation-timing-function: linear;
 }
 
@@ -295,10 +374,10 @@ body {
 
 .butterflyorange_fly {
     animation-name: butterflyorange_fly;
-    animation-duration: 2s;
+    animation-duration: 3s;
     animation-iteration-count: infinite;
     animation-direction: reverse;
-    animation-delay: 0s;
+    animation-delay: 3s;
     animation-timing-function: linear;
 }
 
@@ -325,6 +404,7 @@ body {
     animation-iteration-count: infinite;
     animation-direction: reverse;
     animation-timing-function: linear;
+    animation-delay: 3s;
 }
 
 @keyframes bee_fly {
@@ -343,5 +423,7 @@ body {
         left: -10vw;
     }
 }
+
+
 
 /*****SLUT ANIMATIONER******/

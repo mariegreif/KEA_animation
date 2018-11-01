@@ -29,11 +29,11 @@ function showStart() {
 function showSettings() {
     document.querySelector("#settings").classList.add("show");
     document.querySelector("#play").addEventListener("click", hideStart);
-    document.querySelector("#settings").addEventListener("click", hideSettings);
+    document.querySelector("#kryds").addEventListener("click", hideSettings);
 }
 
 function hideSettings() {
-    document.querySelector("#settings").classList.remove("show")
+    document.querySelector("#settings").classList.remove("show");
 }
 
 function hideStart() {
@@ -46,7 +46,9 @@ function hideStart() {
     document.querySelector("#settings").classList.remove("show");
 
     //Når fade animationen er færdig ->startGame
-    document.querySelector("#game_background").addEventListener("animationend", startGame);
+    document.querySelector("#start").addEventListener("animationend", startGame);
+
+    document.querySelector("#start").classList.remove("show");
 }
 
 function startGame() {
@@ -55,4 +57,35 @@ function startGame() {
     document.querySelector("#start").classList.add("hide");
     //vid spilskærm
     document.querySelector("#game_background").classList.add("show");
+
+    document.querySelector("#butterflyblue").addEventListener("click", clickButterfly);
+    document.querySelector("#butterflyorange").addEventListener("click", clickButterfly);
+    document.querySelector("#angrybee").addEventListener("click", clickBee);
+    document.querySelector("#fatbee").addEventListener("click", clickBee);
+}
+
+let point = 0;
+
+function clickButterfly() {
+    console.log("clickButterfly");
+    point++;
+    console.log(point);
+
+    document.querySelector(".antal").textContent = point;
+
+}
+let liv = 3;
+
+function clickBee() {
+    console.log("clickBee");
+
+    let heart = "#heart" + liv;
+    document.querySelector(heart).classList.add("dissappear");
+    console.log("#heart" + liv);
+    liv--;
+    console.log(liv);
+    point--;
+    console.log(point);
+    document.querySelector(".antal").textContent = point;
+
 }
