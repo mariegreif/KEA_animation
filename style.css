@@ -157,6 +157,26 @@ body {
     }
 }
 
+
+.catch {
+    animation-name: catch_me;
+    animation-duration: 1s;
+}
+
+@keyframes catch_me {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(0.5);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
 /***********SPILLESKÆRM***********/
 
 
@@ -281,7 +301,6 @@ body {
 }
 
 #gameover {
-    display: none;
     background-image: url(grafik/game%20over.svg);
     background-size: 100%;
     width: 65vw;
@@ -290,10 +309,20 @@ body {
     bottom: 2vw;
     left: 20vw;
 
+
+}
+
+#retry {
+    background-image: url(grafik/retry-.svg);
+    background-size: 100%;
+    width: 20vw;
+    height: 10vw;
+    position: absolute;
+    top: 28vw;
+    left: 21vw;
 }
 
 #levelcomplete {
-    display: none;
     background-image: url(grafik/winner.svg);
     background-size: 100%;
     width: 55vw;
@@ -301,6 +330,16 @@ body {
     position: absolute;
     top: 6vw;
     left: 24vw;
+}
+
+#play_again {
+    background-image: url(grafik/play%20again.svg);
+    background-size: 100%;
+    width: 25vw;
+    height: 12vw;
+    position: absolute;
+    top: 25vw;
+    left: 15vw;
 }
 
 /***************SLUT UI-ELEMENTER**********/
