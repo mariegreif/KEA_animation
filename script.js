@@ -10,7 +10,8 @@ function sidenVises() {
     console.log("sidenVises");
     //nulstil alting
 
-    document.querySelector("#play_again").classList.add("show")
+    //document.querySelector("#play_again").classList.add("show")
+
     document.querySelector("#gameover").classList.add("hide");
     document.querySelector("#levelcomplete").classList.add("hide");
 
@@ -187,10 +188,23 @@ function clickButterfly() {
         document.querySelector("#yay").currentTime = 0;
         document.querySelector("#yay").play();
 
- }
+           }
+ //Hvordan får jeg figurerne til at starte igen?
+
+          //console.log(this);
+        //this.classList.add("hide");
+    //this.addEventListener("animationend", butterflyForfra);
 
 }
+
+function butterflyForfra(){
+   // console.log("butterflyForfra");
+  //  console.log(this);
+  //  this.classList.add("show");
+}
+
 let liv = 3;
+
 
 function clickBee() {
     console.log("clickBee");
@@ -220,10 +234,10 @@ function clickBee() {
  }
 
 function gameStatus() {
-    if (point < 0) {
+    if (point < 1) {
         gameOver();
     }
-    if (liv < 0) {
+    if (liv < 1) {
         gameOver();
     }
 

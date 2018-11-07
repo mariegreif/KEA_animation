@@ -151,24 +151,6 @@ body {
 }
 
 
-.catch {
-    animation-name: catch_me;
-    animation-duration: 1s;
-}
-
-@keyframes catch_me {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(0.5);
-    }
-
-    100% {
-        transform: scale(0);
-    }
-}
 
 /***********SPILLESKÆRM***********/
 
@@ -294,7 +276,7 @@ body {
 }
 
 #gameover {
-    background-image: url(grafik/game%20over.svg);
+    background-image: url(grafik/gameover.svg);
     background-size: 100%;
     width: 65vw;
     height: 55vw;
@@ -311,17 +293,17 @@ body {
     width: 20vw;
     height: 10vw;
     position: absolute;
-    top: 28vw;
+    top: 31vw;
     left: 21vw;
 }
 
 #levelcomplete {
-    background-image: url(grafik/winner.svg);
+    background-image: url(grafik/winner_1.svg);
     background-size: 100%;
-    width: 55vw;
-    height: 45vw;
+    width: 60vw;
+    height: 59vw;
     position: absolute;
-    top: 6vw;
+    top: 0vw;
     left: 24vw;
 }
 
@@ -331,8 +313,8 @@ body {
     width: 25vw;
     height: 12vw;
     position: absolute;
-    top: 25vw;
-    left: 15vw;
+    top: 29vw;
+    left: 19vw;
 }
 
 /***************SLUT UI-ELEMENTER**********/
@@ -347,7 +329,7 @@ body {
 
 .butterflyblue_fly {
     animation-name: fly;
-    animation-duration: 4s;
+    animation-duration: 6s;
     animation-iteration-count: infinite;
     animation-direction: normal;
     animation-timing-function: linear;
@@ -357,24 +339,24 @@ body {
 @keyframes fly {
     0% {
         left: 100vw;
+        top: 20vw;
     }
 
     50% {
 
-        left: 70vw;
-        top: 40vw;
+        top: 30vw;
 
     }
 
     100% {
         left: -10vw;
-        top: 20vw;
+        top: 10vw;
     }
 }
 
 .fatbee_fly {
     animation-name: fatbee_fly;
-    animation-duration: 5s;
+    animation-duration: 7s;
     animation-iteration-count: infinite;
     animation-delay: 3s;
     animation-timing-function: linear;
@@ -400,13 +382,13 @@ body {
 
     100% {
         left: -15vw;
-        top: 10vw;
+        top: 60vw;
     }
 }
 
 .butterflyorange_fly {
     animation-name: butterflyorange_fly;
-    animation-duration: 3s;
+    animation-duration: 7s;
     animation-iteration-count: infinite;
     animation-direction: reverse;
     animation-delay: 3s;
@@ -416,6 +398,7 @@ body {
 @keyframes butterflyorange_fly {
     0% {
         left: 100vw;
+        top: 50vw;
     }
 
     50% {
@@ -427,12 +410,13 @@ body {
 
     100% {
         left: -10vw;
+        top: 10vw;
     }
 }
 
 .angrybee_fly {
     animation-name: bee_fly;
-    animation-duration: 4s;
+    animation-duration: 7s;
     animation-iteration-count: infinite;
     animation-direction: reverse;
     animation-timing-function: linear;
@@ -447,7 +431,7 @@ body {
     50% {
 
         left: 40vw;
-        top: 30vw;
+        top: 40vw;
 
     }
 
