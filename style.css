@@ -51,6 +51,7 @@ body {
     width: 16vw;
     height: 5.85vw;
     position: absolute;
+    top: 50vw;
     left: 83vw;
 }
 
@@ -150,6 +151,24 @@ body {
     }
 }
 
+.hide_butterfly {
+    animation-name: hide_elements_kf;
+    animation-duration: .1s;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+}
+
+
+@keyframes hide_elements_kf {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(0);
+    }
+}
+
 
 
 /***********SPILLESKÆRM***********/
@@ -168,7 +187,7 @@ body {
 /*******SPIL-FIGURER********/
 
 #butterflyblue {
-    background-image: url(grafik/butterfly%20blue.svg);
+    background-image: url(grafik/butterfly_blue.svg);
     background-size: 100%;
     width: 10vw;
     height: 8.6vw;
@@ -194,7 +213,7 @@ body {
 
 
 #butterflyorange {
-    background-image: url(grafik/butterfly%20orange.svg);
+    background-image: url(grafik/butterfly_orange.svg);
     background-size: 100%;
     width: 10vw;
     height: 8vw;
@@ -207,7 +226,7 @@ body {
 
 
 #fatbee {
-    background-image: url(grafik/fat%20angry%20bee.svg);
+    background-image: url(grafik/fat_angry_bee.svg);
     background-size: 100%;
     width: 8vw;
     height: 6.4vw;
@@ -222,7 +241,7 @@ body {
 /***************UI-ELEMENTER**********/
 
 #points {
-    background-image: url(grafik/fangede%20sommerfugl.svg);
+    background-image: url(grafik/fangede_sommerfugl.svg);
     background-size: 100%;
     width: 15vw;
     height: 9.5vw;
@@ -272,14 +291,24 @@ body {
     position: absolute;
     left: 43vw;
 
-
 }
+
+#tid {
+    font-family: 'Mali';
+    color: #b96e16;
+    position: absolute;
+    top: 0.5vw;
+    left: 4.5vw;
+    font-size: 6vw;
+    text-align: center;
+}
+
 
 #gameover {
     background-image: url(grafik/gameover.svg);
     background-size: 100%;
     width: 65vw;
-    height: 55vw;
+    height: 57vw;
     position: absolute;
     bottom: 2vw;
     left: 20vw;
@@ -304,7 +333,7 @@ body {
     height: 59vw;
     position: absolute;
     top: 0vw;
-    left: 24vw;
+    left: 20vw;
 }
 
 #play_again {
@@ -333,7 +362,7 @@ body {
     animation-iteration-count: infinite;
     animation-direction: normal;
     animation-timing-function: linear;
-    animation-delay: 3s;
+    /*animation-delay: 3s;*/
 }
 
 @keyframes fly {
@@ -356,9 +385,9 @@ body {
 
 .fatbee_fly {
     animation-name: fatbee_fly;
-    animation-duration: 7s;
+    animation-duration: 6s;
     animation-iteration-count: infinite;
-    animation-delay: 3s;
+    /*animation-delay: 3s;*/
     animation-timing-function: linear;
 }
 
@@ -388,10 +417,10 @@ body {
 
 .butterflyorange_fly {
     animation-name: butterflyorange_fly;
-    animation-duration: 7s;
+    animation-duration: 6s;
     animation-iteration-count: infinite;
     animation-direction: reverse;
-    animation-delay: 3s;
+    /*animation-delay: 3s;*/
     animation-timing-function: linear;
 }
 
@@ -416,11 +445,11 @@ body {
 
 .angrybee_fly {
     animation-name: bee_fly;
-    animation-duration: 7s;
+    animation-duration: 6s;
     animation-iteration-count: infinite;
     animation-direction: reverse;
     animation-timing-function: linear;
-    animation-delay: 3s;
+    /*animation-delay: 3s;*/
 }
 
 @keyframes bee_fly {
@@ -439,6 +468,7 @@ body {
         left: -10vw;
     }
 }
+
 
 
 
